@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ResultCard.module.css";
-import mriUrl from "../../assets/demo.jpg";
+import Image from "next/image";
+
+
 
 const ScanResultCard = ({ tumorType, confidence, imageUrl }) => {
   const isHighConfidence = confidence >= 80;
@@ -12,7 +14,8 @@ const ScanResultCard = ({ tumorType, confidence, imageUrl }) => {
       <div className={styles.content}>
         {/* MRI Image */}
         <div className={styles.imageBox}>
-          <img src={mriUrl.src} alt="MRI Scan" />
+          <img src="/assets/demo.jpg" alt="MRI Scan" />
+
         </div>
 
         {/* Info */}
